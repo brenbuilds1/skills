@@ -1,0 +1,6 @@
+{
+  "name": "bren-skills",
+  "description": "Skills for coding agents that read the receipts: unclebob, memory-audit, engineering-review, loop-referee, skill-auditor.",
+  "version": "1.0.0",
+  "author": { "name": "Bren Builds" }
+}

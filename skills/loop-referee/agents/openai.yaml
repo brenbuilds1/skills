@@ -1,0 +1,4 @@
+interface:
+  display_name: "Loop Referee"
+  short_description: "Stop rules and a ledger for writer/reviewer agent loops."
+  default_prompt: "Use Loop Referee: set the loop contract, keep the append-only per-round ledger, and apply the stop rules to this writer/reviewer loop. Stop or escalate the moment a rule fires, and name the rule."

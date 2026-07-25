@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Auditor"
+  short_description: "Read a skill's code before you install it."
+  default_prompt: "Use Skill Auditor: clone this skill package read-only and audit it for fetch-and-execute, credential access, hidden code, network calls, and broad permission grants. Report findings with file:line receipts and an honest severity."

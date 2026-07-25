@@ -1,0 +1,11 @@
+{
+  "name": "bren-skills",
+  "owner": { "name": "Bren Builds" },
+  "plugins": [
+    {
+      "name": "bren-skills",
+      "source": "./",
+      "description": "Skills for coding agents that read the receipts: unclebob, memory-audit, engineering-review, loop-referee, skill-auditor."
+    }
+  ]
+}

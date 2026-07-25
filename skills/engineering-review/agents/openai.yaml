@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Review"
+  short_description: "Bug-first review with production receipts."
+  default_prompt: "Use Engineering Review: review this change for concrete bugs, regressions, missing tests, security/privacy risk, and operational impact."

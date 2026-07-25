@@ -1,0 +1,4 @@
+interface:
+  display_name: "Memory Audit"
+  short_description: "Fact-check the agent's memory files against the repo, line by line, with receipts."
+  default_prompt: "Use Memory Audit: inventory every memory and instruction file this agent loads, split them into atomic claims, verify each claim against the current repo and git history, and report the per-line verdict table (confirmed, stale, wrong, contradiction, preference) with a receipt for every verdict. Do not edit or delete anything."
