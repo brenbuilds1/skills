@@ -1,4 +1,4 @@
 interface:
   display_name: "Uncle Bob"
   short_description: "Do-not-read-the-code delegation: locked tests, mutation testing, one-table receipt."
-  default_prompt: "Use Uncle Bob: write gherkin scenarios for my approval, lock failing tests before implementing, then run every constraint (unit, acceptance, changed-line coverage, mutation, quality, project checks) and report the one-table receipt. Never mix code edits and test edits in one round."
+  default_prompt: "Use Uncle Bob: write gherkin scenarios for my approval, lock failing tests before implementing, then run every constraint (unit, acceptance, changed-line coverage, mutation, quality, project checks, torture round) and report the one-table receipt. Never mix code edits and test edits in one round."

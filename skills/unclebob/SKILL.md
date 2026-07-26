@@ -8,7 +8,8 @@ description: >
   implementation, then runs the result through machine-checked constraints:
   unit tests, acceptance scenarios, changed-line coverage, mutation testing
   on both the code and the gherkin examples, quality metrics, the project's
-  own checks. The human reads a one-table
+  own checks, plus a torture round (property, performance, jitter tests)
+  where the change warrants it. The human reads a one-table
   receipt instead of the diff. The test lock and the mutation constraint exist
   because the same agent writes both the code and the tests.
 ---
@@ -67,9 +68,9 @@ After step 2, code rounds and test rounds never mix:
 
 ## The Constraints
 
-Run all six. A constraint whose tool is missing from the project gets marked
-`skipped: <reason>` in the receipt. A skipped constraint is visible, never
-silent.
+Run all seven. A constraint whose tool is missing from the project gets
+marked `skipped: <reason>` in the receipt. A skipped constraint is visible,
+never silent.
 
 1. **Unit.** Full suite green.
 2. **Acceptance.** Every approved scenario executes and passes, driven
@@ -95,6 +96,14 @@ silent.
 6. **Project checks.** Whatever the repo itself runs: `make test`, the CI
    script, pre-commit hooks. The project's own QA procedure outranks this
    skill's defaults wherever they disagree.
+7. **Torture round.** The agent is fast; spend the speed here, where it
+   applies. Property tests (hypothesis, fast-check, proptest) on any changed
+   function with an invariant worth stating: round-trips, ordering,
+   idempotence. A performance test wherever the project states a budget to
+   assert against; no budget, no test, say so. For changed concurrent code,
+   jitter tests: repeat the racy paths under randomized thread timing until
+   a race surfaces or the repetition count earns the all-clear, and put that
+   count in the receipt.
 
 | Language | Tests | Coverage | Mutation |
 |---|---|---|---|
@@ -118,6 +127,7 @@ This table replaces the diff as the thing the human reads:
 | spec mutation | pass | 4/4 mutated examples failed as required |
 | quality | pass | lint clean, max new complexity 7 (cap 10) |
 | project checks | pass | make test green |
+| torture | pass | 200 property cases; jitter x500 clean; perf skipped: no budget |
 | test edits after lock | 1 | round 4: scenario "expired token" tightened, human approved |
 ```
 

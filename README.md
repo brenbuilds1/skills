@@ -14,7 +14,9 @@ code and the tests. So the skill makes the human approve gherkin scenarios up
 front, locks failing tests before any implementation exists, forbids mixing
 code edits and test edits in one round, and runs mutation testing last on
 both layers, code mutants and mutated gherkin examples, as the test of the
-tests. Done means a one-table receipt, never a diff to read.
+tests. When the change warrants it there is a torture round: property tests,
+performance tests against a stated budget, jitter tests for concurrent code.
+Done means a one-table receipt, never a diff to read.
 
 Path: [`skills/unclebob/SKILL.md`](./skills/unclebob/SKILL.md)
 
