@@ -1,0 +1,4 @@
+interface:
+  display_name: "STE Audit"
+  short_description: "Fact-check ASD-STE100 compliance: violations table with rule numbers, drift verdict."
+  default_prompt: "Use STE Audit: check this session's replies against the machine-checkable ASD-STE100 rules (sentence length caps, noun cluster limits, allowed verb forms, -ing restrictions, passive voice, paragraph limits) and report the violations table with rule numbers, quoted receipts, and the drift verdict."

@@ -20,6 +20,17 @@ Done means a one-table receipt, never a diff to read.
 
 Path: [`skills/unclebob/SKILL.md`](./skills/unclebob/SKILL.md)
 
+### STE Audit
+
+`ste-audit` checks output against the ASD-STE100 rules a machine can
+verify: sentence caps, noun cluster limits, verb forms, passive voice,
+paragraph limits. Violations table with Issue 9 rule numbers and quotes,
+per response, plus a drift verdict. The memory line makes the style
+appear; nothing checks it holds. This does. No dictionary bundled, that
+list is ASD's.
+
+Path: [`skills/ste-audit/SKILL.md`](./skills/ste-audit/SKILL.md)
+
 ### Memory Audit
 
 `memory-audit` fact-checks an agent's persistent memory against the repo it
@@ -74,6 +85,8 @@ skills/
   memory-audit/
     SKILL.md
   skill-auditor/
+    SKILL.md
+  ste-audit/
     SKILL.md
   unclebob/
     SKILL.md
