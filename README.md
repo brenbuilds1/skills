@@ -74,6 +74,21 @@ runs the thing it audits.
 
 Path: [`skills/skill-auditor/SKILL.md`](./skills/skill-auditor/SKILL.md)
 
+### Render Critic
+
+`render-critic` is a blind score-and-fix loop for agent-built 3D:
+three.js games, WebGPU scenes, Blender renders, glTF exports. The builder never grades its own
+work. A fresh critic sees four fixed screenshots, a six-frame motion burst
+for anything that moves, and a rubric with binding anchors, cites a pixel-level receipt for every score, and the
+overall is the worst axis, never the mean. An order-swapped a/b
+comparison against the prior round decides whether a change moved
+anything. Five rounds, then pass or fail-final, and the rubric is never
+renegotiated mid-run. "Loop until
+8/10" with none of this pinned is how the score drifts to 8 while the
+scene stays ugly.
+
+Path: [`skills/render-critic/SKILL.md`](./skills/render-critic/SKILL.md)
+
 ## Layout
 
 ```text
@@ -83,6 +98,8 @@ skills/
   loop-referee/
     SKILL.md
   memory-audit/
+    SKILL.md
+  render-critic/
     SKILL.md
   skill-auditor/
     SKILL.md
