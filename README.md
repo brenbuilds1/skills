@@ -76,16 +76,12 @@ Path: [`skills/skill-auditor/SKILL.md`](./skills/skill-auditor/SKILL.md)
 
 ### Render Critic
 
-`render-critic` is a blind score-and-fix loop for agent-built 3D:
-three.js games, WebGPU scenes, Blender renders, glTF exports. The builder never grades its own
-work. A fresh critic sees four fixed screenshots, a six-frame motion burst
-for anything that moves, and a rubric with binding anchors, cites a pixel-level receipt for every score, and the
-overall is the worst axis, never the mean. An order-swapped a/b
-comparison against the prior round decides whether a change moved
-anything. Five rounds, then pass or fail-final, and the rubric is never
-renegotiated mid-run. "Loop until
-8/10" with none of this pinned is how the score drifts to 8 while the
-scene stays ugly.
+`render-critic` is the critic loop people share, written down so it
+holds: a fresh critic agent sees only screenshots from four fixed
+angles (plus photos when the scene is a real place), scores 0 to 10
+against definitions per axis with an observation for every score, the
+overall is the worst axis, and the loop stops when two rounds in a row
+move nothing. Three fixes from live use, no machinery beyond them.
 
 Path: [`skills/render-critic/SKILL.md`](./skills/render-critic/SKILL.md)
 
