@@ -85,6 +85,18 @@ move nothing. Three fixes from live use, no machinery beyond them.
 
 Path: [`skills/render-critic/SKILL.md`](./skills/render-critic/SKILL.md)
 
+### Slop Audit
+
+`slop-audit` checks a site or app UI for the tells that make it read as
+vibe-coded. Every "reasons your site looks AI-generated" list mixes the
+defaults a model reaches for with one author's taste; this keeps only
+the tells independent sources agree on (the viral lists, a Reddit study
+of 3.2 million posts, the published catalogs, the design guidance shipped
+with coding agents), names the items those sources call fine when
+chosen, and reports with file and line. Never rewrites.
+
+Path: [`skills/slop-audit/SKILL.md`](./skills/slop-audit/SKILL.md)
+
 ## Layout
 
 ```text
@@ -98,6 +110,8 @@ skills/
   render-critic/
     SKILL.md
   skill-auditor/
+    SKILL.md
+  slop-audit/
     SKILL.md
   ste-audit/
     SKILL.md
