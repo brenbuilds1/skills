@@ -35,8 +35,8 @@ merge its own code?
 2. For each rung below, cite evidence: a file, a command, a PR.
 3. Rungs 4 to 7 are partly workflow. Ask the user what files cannot show,
    and mark answers that cannot be checked as unknown.
-4. Report the table, one row per rung. Name the lowest rung marked partial
-   or missing.
+4. Report the table below exactly: four columns, one row per rung, the
+   status as a plain word. Name the lowest rung marked partial or missing.
 
 ## The Rungs
 
@@ -129,8 +129,8 @@ Offer these as next steps when rung 3 or rung 7 does not hold.
 | 8 autonomy | not yet | rung 1 partial | stay on human review |
 ```
 
-Status is one of: holds, partial, missing, unknown, and for rung 8 only,
-not yet. One row per rung, all eight. End with the lowest rung marked partial
+Use exactly these statuses: holds, partial, missing, unknown. `not yet` is
+for rung 8 only. One row per rung, all eight. End with the lowest rung marked partial
 or missing: that is the next thing to build. List unknown rungs separately,
 as questions for the user.
 
@@ -138,5 +138,11 @@ as questions for the user.
 
 - Report only. Never change code, settings or memory.
 - Every status cites evidence a person can re-check, or says unknown.
+- Write every quantity about the repo as a number read from a command, with
+  the command in the evidence column, for example `ls tests/test_*.py | wc -l`
+  then 43. Never write all, every, none, no or only about the repo without
+  that; an empty search result, shown as its command, is the evidence for
+  none.
+- Evidence says what decided the status. Leave out detail that did not.
 - Mark rung 8 holds only when rungs 1 and 3 both hold; otherwise not yet.
 - A pattern across agents is an environment fix; a one-off is not.
