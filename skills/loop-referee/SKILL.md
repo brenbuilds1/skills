@@ -1,10 +1,10 @@
 ---
 name: loop-referee
 description: >
-  Referee for writer/reviewer loops between coding agents, where one tool
-  writes code and the other reviews it in rounds: Claude Code writing while
-  Codex reviews, or the reverse. Use when running or setting up a cross-model
-  review loop, a test-fix loop, or any "loop until clean" workflow. Sets the
+  Referee for loops between coding agents where one produces and another
+  judges in rounds: Claude Code writing while Codex reviews, or the reverse. Use when running or setting up a cross-model
+  review loop, a test-fix loop, a doc-review loop, or any "loop until clean"
+  workflow. Sets the
   loop contract up front, keeps an append-only per-round ledger, applies stop
   rules so the loop converges, ends, or escalates to a human instead of
   burning tokens on two agents disagreeing. Does not write or fix code itself.
@@ -17,16 +17,10 @@ cannot see. The two can also disagree politely forever, at your expense. The
 stop rules loops ship with today are "clean" and a round cap. Real loops die
 in ways neither covers. This skill is the stop switch and the receipt.
 
-## When To Use
-
-Any loop where one agent produces and another judges: cross-agent code review
-(Claude Code writes, Codex reviews, or the reverse), test-fix loops,
-doc-review loops. Run the referee alongside the loop, not instead of it.
-
 ## How The Loop Actually Runs
 
 No extra software. The loop lives inside one agent session, and that agent is
-the referee. Example with Claude Code writing and Codex reviewing:
+the referee. It runs alongside the loop, not instead of it. Example with Claude Code writing and Codex reviewing:
 
 1. You: "implement X, then run a review loop with codex."
 2. The agent writes the contract (below), then implements.

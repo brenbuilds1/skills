@@ -1,7 +1,10 @@
 ---
 name: slop-audit
 description: >
-  Use when a site or app UI might read as AI-generated or vibe-coded:
+  Audits a site or app UI for the AI-generated tells that independent sources
+  agree on, and reports each finding as a tell, smell or choice with a file
+  and line receipt. Never rewrites. Use when a site or app UI might read as
+  AI-generated or vibe-coded:
   before shipping a landing page, after an agent builds a frontend, or
   when someone says it looks like every other AI site. Also use before
   handing an agent a "reasons your site looks vibe-coded" list, so it

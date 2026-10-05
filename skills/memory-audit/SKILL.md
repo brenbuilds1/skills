@@ -20,13 +20,6 @@ was true in March makes the agent confidently wrong in July. Every entry in
 a memory file is a claim about the repo. Claims age. This skill fact-checks
 them, line by line, with receipts.
 
-## When To Use
-
-The agent just did something baffling that traces back to an old note. You
-inherited a project whose instruction files nobody has read in months. A
-refactor moved directories, renamed commands, or swapped tools. Or simply:
-the memory files have grown for a while and nobody has ever pruned them.
-
 ## What Counts As Memory
 
 Audit every file the agent loads without being asked:

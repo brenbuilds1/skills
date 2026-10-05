@@ -1,7 +1,10 @@
 ---
 name: render-critic
 description: >
-  Use when agent-built 3D looks flat, sloppy, or AI-made, or when a scene
+  Runs a blind critic loop on agent-built 3D: screenshots from fixed cameras,
+  scored 0 to 10 by a fresh critic agent, against photos when the scene is a
+  real place, with a stop rule when rounds stop improving. Use when agent-built
+  3D looks flat, sloppy, or AI-made, or when a scene
   of a real place does not look like the place: three.js or WebGPU
   scenes, Blender renders, glTF exports. Also use when a "make it look
   better" loop keeps circling, or the agent's own scores keep climbing

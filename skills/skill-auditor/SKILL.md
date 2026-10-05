@@ -1,16 +1,12 @@
 ---
 name: skill-auditor
 description: >
-  Audit a third-party agent skill (Claude Code / Codex / Gemini CLI SKILL.md packages) before you install it. Use when asked to audit, vet, review, or security-check a skill, plugin, or marketplace package, or before installing one from GitHub or a marketplace. Clones the package read-only, runs supply-chain greps for fetch-and-execute, credential access, hidden code, network calls, and broad permissions, then reports findings with exact file:line and an honest severity for each. Does not install anything.
+  Audit a third-party agent skill (Claude Code / Codex / Gemini CLI SKILL.md packages) before installing it. Use when asked to audit, vet, review, or security-check a skill, plugin, or marketplace package, or before installing one from GitHub or a marketplace. Clones the package read-only, runs supply-chain greps for fetch-and-execute, credential access, hidden code, network calls, and broad permissions, then reports findings with exact file:line and an honest severity for each. Does not install anything.
 ---
 
 # Skill Auditor
 
 Skills run with your shell, your files, and your credentials. Read them before you trust them. This skill clones a package read-only and reports what the code actually reaches for, with file:line, not vibes.
-
-## When To Use
-
-Before installing any skill or plugin you did not write: a GitHub repo, a marketplace package, anything with a `SKILL.md` and bundled scripts.
 
 ## Method
 

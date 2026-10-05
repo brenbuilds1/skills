@@ -2,8 +2,9 @@
 name: unclebob
 description: >
   A do-not-read-the-code workflow for delegating implementation to a coding
-  agent. Use when handing an agent a feature or a fix you do not intend to
-  review line by line. The agent turns the request into human-approved
+  agent. Use when handing an agent a feature, a fix, or a refactor with a defined
+  outcome that the user does not intend to review line by line. Not for
+  throwaway scripts or exploratory spikes. The agent turns the request into human-approved
   gherkin scenarios, writes failing tests and locks them before writing any
   implementation, then runs the result through machine-checked constraints:
   unit tests, acceptance scenarios, changed-line coverage, mutation testing
@@ -28,13 +29,10 @@ After the lock, no round of work may touch code and tests together. And
 mutation testing runs at the end because it is the one constraint a vacuous
 test cannot talk its way through.
 
-## When To Use
+## Right-Size It
 
-Delegated implementation you intend to judge by behavior, not by reading:
-features, bug fixes, refactors with a defined outcome. Skip it for throwaway
-scripts and exploratory spikes, and say so out loud when you skip it.
-
-Right-size it. The full gauntlet is for code nobody will read. When the
+Skip it for throwaway scripts and exploratory spikes, and say so out loud when
+skipping it. The full gauntlet is for code nobody will read. When the
 human is going to read the diff anyway, plain unit tests can be the whole
 gauntlet; running every constraint on a two-line fix is ritual, not
 confidence.

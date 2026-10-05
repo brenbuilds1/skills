@@ -44,6 +44,23 @@ reports; the human prunes.
 
 Path: [`skills/memory-audit/SKILL.md`](./skills/memory-audit/SKILL.md)
 
+### Trust Ladder
+
+`trust-ladder` audits a coding-agent setup against the trust ladder from
+[Matt Pocock's livestream with Lauren Tan (poteto)](https://www.youtube.com/watch?v=MN9dGgmLyso)
+and [Cory House's summary](https://x.com/housecor/status/2107080556378816979):
+the more you can constrain the agent's output, the more you can trust it. The
+practices are theirs: the agent verifies its own work, mechanical steps live
+in scripts, the codebase makes common mistakes impossible, outside sources
+trigger work, a coordinator groups related work, findings queue before fixes,
+review is by sampling, and agents merge their own work only where it can be
+verified. Grouping them into eight
+ordered rungs, with checks and statuses, is this skill's own. Each status
+cites evidence, and the report names the lowest rung that does not hold.
+`sources.md` gives the timestamp and speaker for every practice.
+
+Path: [`skills/trust-ladder/SKILL.md`](./skills/trust-ladder/SKILL.md)
+
 ### Engineering Review
 
 `engineering-review` is a bug-first review stance for diffs, PRs, commits,
@@ -115,6 +132,9 @@ skills/
     SKILL.md
   ste-audit/
     SKILL.md
+  trust-ladder/
+    SKILL.md
+    sources.md
   unclebob/
     SKILL.md
 ```

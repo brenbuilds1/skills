@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trust Ladder"
+  short_description: "Audit an agent setup rung by rung and name the next rung to build."
+  default_prompt: "Use Trust Ladder: audit this repo and agent setup rung by rung (verification, determinism, constraints, outer loop, coordination, queues, review, autonomy), cite evidence for each status, and name the lowest rung that does not hold. Report only."
